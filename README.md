@@ -33,8 +33,8 @@ This dataset is used to replicate Figure 2. Each rows corresponds to a municipal
 - NOM_COMUNA = name of municipality
 - COMUNA = numerical id of municiplaity
 - week_start = date where week starts
-- wnorm.out.max.avg = ???
-- norm.out.prop.avg = ???
+- wnorm.out.max.avg = population weighted normalized mobility
+- norm.out.prop.avg = risk-adjusted normalized mobility
 - frac.lock = fraction of population in municipality that is under lockdown.
 - frac.D_E = fraction of population in municipality that belongs to the low socioeconomic segment
 
@@ -43,8 +43,14 @@ This dataset is used to replicate Figure 2. Each rows corresponds to a municipal
 
 This dataset is used to estimate the regression models (4) and (5) and replicate Tables 1 and 3 in the paper.
 
-TO BE COMPLETED
-
+- NOM_COMUNA = name of municipality
+- week = week number (as factor)
+- weeknum = week number (as numeric)
+- R = infection rate
+- lag.frac.lock = lagged percentage of municipality in lockdown in week
+- lag.mob.out.max = lagged mobility measure
+- lag.mob.risk.prop = lagged risk adjusted mobility measure
+- sample.sel150 = boolean filter for data entry selection where cases are greater than 150
 
 #### Data dictionary of `panel_data_mobility.csv`.
 
@@ -72,12 +78,34 @@ Additional variables used in the appendix for robustness analysis:
 
 This dataset is used to run several robustness tests in the appendix. Each row is a municipality-week and the data includes infection and mobility variables.
 
-COMPLETE HERE
+- NOM_COMUNA = name of municipality
+- week = week number (as factor)
+- weeknum = week number (as numeric)
+- R = infection rate
+- R.adj = death-adjusted infection rate
+- lag.frac.lock = lagged percentage of municipality in lockdown in week
+- lag.mob.out.max.cor = lagged mobility measure adjusted for under-reporting
+- lag.mob.out.sum = lagged mobility measure with sum of weekly mobility rather than max
+- lag.mob.risk.prop.cor = lagged risk adjusted mobility measure adjusted for under-reporting
+- lag.mob.risk.prop.sum = lagged risk adjusted mobility measure with sum of weekly mobility rather than max
+- lag.Trip.Out = lagged public transportation mobility measure
+- lag.Trip.Risk = lagged risk adjusted public transportation mobility measure
+- sample.sel150 = boolean filter for data entry selection where cases are greater than 150
+
 
 #### Data dictionary of `fig3_appendix_data.csv`
 
-This dataset is used to replicate Figure 3 in the appendix E of the paper.
+This dataset is used to replicate Figure 3 in the appendix E of the paper. Each rows corresponds to a municipality-week and contains data on measures of mobility.
 
-COMPLETE DICTIONARY HERE
-
-
+- date = date id
+- week_start = date where week starts
+- comuna_code = numerical id of municipality
+- comuna = name of municipality
+- new_cases = number of new cases in municipality-week
+- new_deaths = number of new deaths in municipality-week
+- estimate = estimate of case under-reporting rate
+- lower = lower estimate of case under-reporting rate
+- upper = upper estimate of case under-reporting rate
+- trueCasesMid = death-adjusted number of cases
+- trueCasesLow = lower estimate of death-adjusted number of cases
+- trueCasesHigh = upper estiamte of death-adjusted number of cases
