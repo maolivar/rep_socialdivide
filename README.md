@@ -84,6 +84,8 @@ This dataset is used to run several robustness tests in the appendix. Each row i
 - R = infection rate
 - R.adj = death-adjusted infection rate
 - lag.frac.lock = lagged percentage of municipality in lockdown in week
+- lag.mob.out.max = lagged mobility measure
+- lag.mob.risk.prop = lagged risk-adjusted mobility measure
 - lag.mob.out.max.cor = lagged mobility measure adjusted for under-reporting
 - lag.mob.out.sum = lagged mobility measure with sum of weekly mobility rather than max
 - lag.mob.risk.prop.cor = lagged risk adjusted mobility measure adjusted for under-reporting
@@ -91,7 +93,6 @@ This dataset is used to run several robustness tests in the appendix. Each row i
 - lag.Trip.Out = lagged public transportation mobility measure
 - lag.Trip.Risk = lagged risk adjusted public transportation mobility measure
 - sample.sel150 = boolean filter for data entry selection where cases are greater than 150
-
 
 #### Data dictionary of `fig3_appendix_data.csv`
 
