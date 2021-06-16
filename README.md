@@ -74,4 +74,10 @@ This dataset is used to run several robustness tests in the appendix. Each row i
 
 COMPLETE HERE
 
+#### Data dictionary of `fig3_appendix_data.csv`
+
+This dataset is used to replicate Figure 3 in the appendix E of the paper.
+
+COMPLETE DICTIONARY HERE
+
 
