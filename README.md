@@ -41,7 +41,7 @@ This dataset is used to replicate Figure 2. Each rows corresponds to a municipal
 
 #### Data dictionary of `infections_data.csv`:
 
-This dataset is used to estimate the regression models (4) and (5) and replicate Tables 1 and 3 in the paper. This dataset is also used to run several robustness tests in the appendix. Each row is a municipality-week and the data includes infection and mobility variables.
+This dataset is used to estimate the regression models (4) and (5) and replicate Tables 1 and 3 in the paper. This dataset is also used to run several robustness tests and replicate Tables 4 through 7 in the appendix. Each row is a municipality-week and the data includes infection and mobility variables.
 
 - NOM_COMUNA = name of municipality
 - week = week number (as factor)
