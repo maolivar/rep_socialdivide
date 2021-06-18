@@ -39,18 +39,26 @@ This dataset is used to replicate Figure 2. Each rows corresponds to a municipal
 - frac.D_E = fraction of population in municipality that belongs to the low socioeconomic segment
 
 
-#### Data dictionary of `tab1_tab3_data.csv`
+#### Data dictionary of `infections_data.csv`:
 
-This dataset is used to estimate the regression models (4) and (5) and replicate Tables 1 and 3 in the paper.
+This dataset is used to estimate the regression models (4) and (5) and replicate Tables 1 and 3 in the paper. This dataset is also used to run several robustness tests in the appendix. Each row is a municipality-week and the data includes infection and mobility variables.
 
 - NOM_COMUNA = name of municipality
 - week = week number (as factor)
 - weeknum = week number (as numeric)
 - R = infection rate
+- R.adj = death-adjusted infection rate
 - lag.frac.lock = lagged percentage of municipality in lockdown in week
 - lag.mob.out.max = lagged mobility measure
-- lag.mob.risk.prop = lagged risk adjusted mobility measure
+- lag.mob.risk.prop = lagged risk-adjusted mobility measure
+- lag.mob.out.max.cor = lagged mobility measure adjusted for under-reporting
+- lag.mob.out.sum = lagged mobility measure with sum of weekly mobility rather than max
+- lag.mob.risk.prop.cor = lagged risk adjusted mobility measure adjusted for under-reporting
+- lag.mob.risk.prop.sum = lagged risk adjusted mobility measure with sum of weekly mobility rather than max
+- lag.Trip.Out = lagged public transportation mobility measure
+- lag.Trip.Risk = lagged risk adjusted public transportation mobility measure
 - sample.sel150 = boolean filter for data entry selection where cases are greater than 150
+
 
 #### Data dictionary of `panel_data_mobility.csv`.
 
@@ -73,26 +81,6 @@ Additional variables used in the appendix for robustness analysis:
 - LockOther = fraction of population whose destination is in lockdown. This measure captures lockdown externalities across zones, used for robustness analysis in the appendix.
 - lag.norm.new.symptoms = lagged weekly new infections in the municipality where the zone is located.
 
-
-#### Data dictionary for `infections_appendix_data.csv`:
-
-This dataset is used to run several robustness tests in the appendix. Each row is a municipality-week and the data includes infection and mobility variables.
-
-- NOM_COMUNA = name of municipality
-- week = week number (as factor)
-- weeknum = week number (as numeric)
-- R = infection rate
-- R.adj = death-adjusted infection rate
-- lag.frac.lock = lagged percentage of municipality in lockdown in week
-- lag.mob.out.max = lagged mobility measure
-- lag.mob.risk.prop = lagged risk-adjusted mobility measure
-- lag.mob.out.max.cor = lagged mobility measure adjusted for under-reporting
-- lag.mob.out.sum = lagged mobility measure with sum of weekly mobility rather than max
-- lag.mob.risk.prop.cor = lagged risk adjusted mobility measure adjusted for under-reporting
-- lag.mob.risk.prop.sum = lagged risk adjusted mobility measure with sum of weekly mobility rather than max
-- lag.Trip.Out = lagged public transportation mobility measure
-- lag.Trip.Risk = lagged risk adjusted public transportation mobility measure
-- sample.sel150 = boolean filter for data entry selection where cases are greater than 150
 
 #### Data dictionary of `fig3_appendix_data.csv`
 
