@@ -29,7 +29,6 @@ This dataset is used to replicate Figure 1. Each row corresponds to a municipali
 
 This dataset is used to replicate Figure 2. Each rows corresponds to a municipality-week and contains data on measures of mobility.
 
-- X : index
 - NOM_COMUNA = name of municipality
 - COMUNA = numerical id of municiplaity
 - week_start = date where week starts
